@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 *{
 margin: 0;
 padding: 0;
+font-family: 'Comfortaa', cursive;
 }
 body{
   background: #030303;
 }
 h1{
   text-align:   center;
+
 }
 .header{
   background: #1D1D1D;
@@ -19,11 +22,20 @@ h1{
 }
 .tool{
   width:80%;
-  margin: 10px auto 20px auto;
+  margin: 15px auto 20px auto;
   background: #606060;
   min-height:120px;
   border-radius: 15px;
   padding-bottom: 15px;
+}
+.tool h1{
+  color: #9CCC65;
+  font-size:1.7em;
+}
+.tool .header{
+  border-bottom:2px solid #9CCC65;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 .to_md5, .from_md5{
   text-align: center;
@@ -33,4 +45,23 @@ h1{
 input,button{
   outline: none;
   border: none;
+}
+a{
+  text-decoration: none;
+  color:#CFD8DC;
+  font-size: 1.8em;
+  transition: all 0.3s ease-in-out;
+}
+a:hover{
+  font-size: 1.83em;
+  color:#29B6F6;
+}
+i{
+  color:#42A5F5;
+}
+ul{
+  margin:40px;
+}
+li{
+  margin-top:10px;
 }
