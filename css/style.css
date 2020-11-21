@@ -1,0 +1,36 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+  background: #030303;
+}
+h1{
+  text-align:   center;
+}
+.header{
+  background: #1D1D1D;
+  height:50px;
+  padding: 15px;
+  margin: 0;
+  border-bottom:2px solid #EF5350;
+  color:#F1F1F1;
+  font-size: 1.2em;
+}
+.tool{
+  width:80%;
+  margin: 10px auto 20px auto;
+  background: #606060;
+  min-height:120px;
+  border-radius: 15px;
+  padding-bottom: 15px;
+}
+.to_md5, .from_md5{
+  text-align: center;
+  margin:15px 0 0 0;
+
+}
+input,button{
+  outline: none;
+  border: none;
+}
