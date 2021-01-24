@@ -45,7 +45,7 @@ input,button{
 .show-info{
   background-color: #F5F5F5;
   font-size: 23px;
-  margin: 30px 30px;
+  margin: -25px 20px;
   position: absolute;
   padding: 10px;
   box-shadow: 1px 1px 1px black;
@@ -55,26 +55,17 @@ input,button{
 }
 #info{
   position: absolute;
-  margin: 105px 0 0 23px;
+  margin: 50px 0 0 23px;
   font-size: 19px;
   height:0px;
   transition-property: height;
   transition-duration: 0.7s;
   overflow: hidden;
+  background-color: #F5F5F5;
 }
 #info table{
   border-bottom:1px solid black;
 }
 #info td:first-child{
   background-color: #F5F5F5;
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size:1.5em;
-    }
-    …
-    h2 {
-        font-size:2.5em;
-    }
 }
