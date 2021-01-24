@@ -23,10 +23,10 @@ document.getElementById('p2').style.backgroundColor=color;
 document.getElementById('p3').style.backgroundColor=color;
 
 function showInfo(){
-  if(document.getElementById('info').style.height=='200px'){
+  if(document.getElementById('info').style.height=='210px'){
     document.getElementById('info').style.height='0px';
   }else{
-    document.getElementById('info').style.height='200px';
+    document.getElementById('info').style.height='210px';
   }
 }
 
