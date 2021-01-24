@@ -1,68 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 *{
 margin: 0;
 padding: 0;
-font-family: 'Comfortaa', cursive;
+font-family: 'Yusei Magic', sans-serif;
 }
-body{
-  background: #030303;
+body,html{
+  background: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+.schedule{
+  margin: 50px auto 20px auto;
+  font-size: 24px;
+}
+.schedule td{
+  padding: 15px;
+  width:150px;
+  height:30px;
+  text-align:   center;
 }
 h1{
-  text-align:   center;
+  margin: 5px 10px;
+}
 
-}
-.header{
-  background: #1D1D1D;
-  height:50px;
-  padding: 15px;
-  margin: 0;
-  border-bottom:2px solid #EF5350;
-  color:#F1F1F1;
-  font-size: 1.2em;
-}
-.tool{
-  width:80%;
-  margin: 15px auto 20px auto;
-  background: #606060;
-  min-height:120px;
-  border-radius: 15px;
-  padding-bottom: 15px;
-}
-.tool h1{
-  color: #9CCC65;
-  font-size:1.7em;
-}
-.tool .header{
-  border-bottom:2px solid #9CCC65;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-.to_md5, .from_md5{
-  text-align: center;
-  margin:15px 0 0 0;
-
-}
 input,button{
   outline: none;
   border: none;
 }
 a{
   text-decoration: none;
-  color:#CFD8DC;
-  font-size: 1.8em;
-  transition: all 0.4s ease-in-out;
+
+
 }
 a:hover{
-  font-size: 1.83em;
-  color:#42A5F5;
+
 }
 
-i{
-  color:#42A5F5;
+.schedule tr td{
+  border-right:solid 1px #464646;
+  background-color: #282828;
+  color:#FFF;
 }
-ul{
-  margin:40px;
+.schedule tr td:first-child{
+  border-right:solid 1px black;
+  background-color: #F5F5F5;
+  color:black;
 }
-li{
-  padding:10px;
+.schedule .days td{
+  border-bottom:solid 1px black;
+  background-color: #F5F5F5;
+  color:black;
+}
+.show-info{
+  background-color: #F5F5F5;
+  font-size: 23px;
+  margin: 30px 30px;
+  position: absolute;
+  padding: 10px;
+  box-shadow: 1px 1px 1px black;
+}
+.showInfo:focus{
+  box-shadow:none;
+}
+#info{
+  position: absolute;
+  margin: 105px 0 0 23px;
+  font-size: 19px;
+  height:0px;
+  transition-property: height;
+  transition-duration: 0.7s;
+  overflow: hidden;
+  /* background-color: #BDBDBD; */
+}
+#info table{
+  border-bottom:1px solid black;
+}
+#info td:first-child{
+  background-color: #F5F5F5;
 }
