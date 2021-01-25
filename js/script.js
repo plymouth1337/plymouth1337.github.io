@@ -5,16 +5,16 @@ dt = Math.floor(((d1.getTime() - d0.getTime() + 1000*60*60*24) / (1000*60*60*24*
 let color='';
 if(dt % 2){
    color='#EF5350';
-  document.getElementById('p1').innerHTML='c.TPA <br>Online';
-  document.getElementById('p2').innerHTML='lab.ASD<br>cab.114';
-  document.getElementById('p3').innerHTML='';
+  document.getElementById('p1').innerHTML='';
+  document.getElementById('p2').innerHTML='sem.ASD<br>cab.609';
+  document.getElementById('p3').innerHTML='lab.GC<br>cab.502';
   document.getElementById('week').innerHTML='Odd';
   document.getElementById('week').style.color=color;
 }else{
    color='#9CCC65';
-  document.getElementById('p1').innerHTML='';
-  document.getElementById('p2').innerHTML='sem.ASD<br>cab.609';
-  document.getElementById('p3').innerHTML='lab.GC<br>cab.502';
+  document.getElementById('p1').innerHTML='c.TPA <br>Online';
+  document.getElementById('p2').innerHTML='lab.ASD<br>cab.114';
+  document.getElementById('p3').innerHTML='';
   document.getElementById('week').innerHTML='Even';
   document.getElementById('week').style.color=color;
 }
