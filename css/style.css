@@ -30,16 +30,28 @@ input,button{
   border-right:solid 1px #464646;
   background-color: #282828;
   color:#FFF;
+  border-radius: 2px;
+}
+.schedule .days td:first-child{
+  background-color: #5F5F5F;
+  color:#fff;
 }
 .schedule tr td:first-child{
   border-right:solid 1px black;
   background-color: #F5F5F5;
   color:black;
+
 }
 .schedule .days td{
   border-bottom:solid 1px black;
   background-color: #F5F5F5;
   color:black;
+}
+.schedule tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+.schedule tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
 }
 .show-info{
   background-color: #F5F5F5;
