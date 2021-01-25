@@ -31,24 +31,35 @@ $('.schedule').ready(function(){
 });
 
 class Lesson{
-  constructor(day){
+  constructor(day,dt){
     if(day==1){
-      this.Day=['c.ASD','c.RC','c.TPA','','','']
+      if(dt % 2){
+        this.Day=['c.ASD','c.RC','','','','']
+      }else{
+        this.Day=['c.ASD','c.RC','c.TPA','','','']
+      }
     }
     else if (day==2) {
       this.Day=['c.GC','','c.SI','','','']
     }
     else if (day==3) {
-      this.Day=['','','','lab.TPA','lab.ASD','lab.SI']
+      if(dt % 2){
+        this.Day=['','','','lab.TPA','sem.ASD','lab.SI']
+      }else{
+        this.Day=['','','','lab.TPA','lab.ASD','lab.SI']
+      }
     }
     else if (day==4) {
       this.Day=['c.FER','c.TAP','c.FER','','','']
     }
     else if (day==5) {
-      this.Day=['','','lab.RC','sem.FER','','']
+      if(dt % 2){
+        this.Day=['','','lab.RC','sem.FER','lab.GC','']
+      }else{
+        this.Day=['','','lab.RC','sem.FER','','']
+      }
     }
   }
-
   lesson_now(time){
     this.startLesson = new Date();
     this.startLesson.setHours(8,0,0);
@@ -91,7 +102,7 @@ class Lesson{
     }
   }
 }
-let today=new Lesson(new Date().getDay());
+let today=new Lesson(new Date().getDay(),dt);
 today.lesson_now(new Date());
 
 
