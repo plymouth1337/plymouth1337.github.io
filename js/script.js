@@ -71,7 +71,7 @@ class Lesson{
           if(this.Day[count]!=''){
             document.getElementById('study-now').innerHTML='Lesson at the moment: '+this.Day[count];
             document.getElementById('study-now').style.color='#EF5350';
-            let hours=this.startLesson.getHours();
+            let hours=this.startLesson.getHours()+':'+this.startLesson.getMinutes();
             let lesson=this.Day[count];
             $('.schedule').ready(function(){
               $('tr').each(function(){
