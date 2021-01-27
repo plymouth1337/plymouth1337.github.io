@@ -8,7 +8,7 @@ if(dt % 2){
   document.getElementById('week').innerHTML='Odd';
   document.getElementById('week').style.color='#EF5350';
 }else{
-  document.getElementById('p1').innerHTML='c.TPA <br><span class="online">Online</span>';
+  document.getElementById('p1').innerHTML='c.TAP <br><span class="online">Online</span>';
   document.getElementById('p2').innerHTML='lab.ASD<br><span class="offline">cab.114</span>';
   document.getElementById('week').innerHTML='Even';
   document.getElementById('week').style.color='#9CCC65';
@@ -36,7 +36,7 @@ class Lesson{
       if(dt % 2){
         this.Day=['c.ASD','c.RC','','','','']
       }else{
-        this.Day=['c.ASD','c.RC','c.TPA','','','']
+        this.Day=['c.ASD','c.RC','c.TAP','','','']
       }
     }
     else if (day==2) {
