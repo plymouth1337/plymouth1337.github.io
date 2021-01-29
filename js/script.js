@@ -56,6 +56,9 @@ class Lesson{
       if(this.week % 2){ this.Day=['','','lab.RC','sem.FER','lab.GC','']  }
       else{ this.Day=['','','lab.RC','sem.FER','',''] }
     }
+    else{
+      this.Day='weekend';
+    }
   }
 
 
@@ -63,13 +66,14 @@ class Lesson{
     if(this.Day[count]!=''){
       document.getElementById('study-now').innerHTML='Lesson at the moment: '+this.Day[count];
       document.getElementById('study-now').style.color='#EF5350';
-      let hours=this.startLesson.getHours()+':'+this.startLesson.getMinutes();
+      let hours=this.startLesson.getHours().toString();
       let lesson=this.Day[count];
       $('.schedule').ready(function(){
         $('tr').each(function(){
           if($(this).is(":contains("+hours+")")){
             $(this).children('td:first-child').css('background-color','#EF5350')
             $(this).children("td:contains("+lesson+")").css('background-color','#EF5350')
+            return false;
           }
         });
       });
@@ -83,24 +87,16 @@ class Lesson{
     this.startLesson.setHours(8,0,0);
     this.endLesson.setHours(9,30,0);
     let count=0;
-    let hours='';
     while(true){
+      if(this.Day=='weekend'){
+        document.getElementById('study-now').innerHTML='Weekend!';
+        break;
+      }
       if(this.date >= this.startLesson && this.date < this.endLesson ){
           this.color_lesson(count);
           return;
       }
-      hours=this.startLesson.getHours()+':'+this.startLesson.getMinutes();
-      console.log(hours);
-      $('.schedule').ready(function(){
-        $('tr').each(function(){
-          let l=$(this);
-          if($(this).is(":contains("+hours+")")){
-            console.log(l);
-            $(this).children('td:first-child').css('text-decoration','line-through')
-          }
-        });
-      });
-
+      this.cross_out_time(this.startLesson.getHours().toString(),count+2);
       count++;
       if(count>5){
         document.getElementById('study-now').innerHTML='No lessons at this time. Feel freedom!';
@@ -117,10 +113,35 @@ class Lesson{
     }
   }
 
+  cross_out_time(hours,count){
+    $('.schedule').ready(function(){
+      $('tr').each(function(){
+        if($(this).is(":contains("+hours+")")){
+          $(this).children('td').css('text-decoration','line-through');
+          $(this).children('td:first-child').css('background-color','#B7B7B7');
+          $(this).children('td:not(:first-child)').css('color','#B7B7B7');
+          return false;
+        }
+      });
+    });
+  }
+  cross_out_day(){
+    for (let i=1;i<6;i++){
+      console.log(this.date.getDay());
+      if(i==this.date.getDay()){
+        return;
+      }
+      let day=i+1;
+      $('.days').children('td:nth-child('+day+')').css('text-decoration','line-through');
+      $('.days').children('td:nth-child('+day+')').css('background-color','#B7B7B7');
+    }
+  }
+
 }
 
 
 let today=new Lesson(new Date());
+today.cross_out_day();
 today.lesson_now();
 
 
