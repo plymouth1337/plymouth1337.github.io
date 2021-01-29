@@ -83,11 +83,24 @@ class Lesson{
     this.startLesson.setHours(8,0,0);
     this.endLesson.setHours(9,30,0);
     let count=0;
+    let hours='';
     while(true){
       if(this.date >= this.startLesson && this.date < this.endLesson ){
           this.color_lesson(count);
           return;
       }
+      hours=this.startLesson.getHours()+':'+this.startLesson.getMinutes();
+      console.log(hours);
+      $('.schedule').ready(function(){
+        $('tr').each(function(){
+          let l=$(this);
+          if($(this).is(":contains("+hours+")")){
+            console.log(l);
+            $(this).children('td:first-child').css('text-decoration','line-through')
+          }
+        });
+      });
+
       count++;
       if(count>5){
         document.getElementById('study-now').innerHTML='No lessons at this time. Feel freedom!';
