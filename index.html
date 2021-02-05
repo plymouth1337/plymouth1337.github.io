@@ -2,98 +2,50 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=600">
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <title>Schedule</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="icons8-calendar-64.png" type="image/png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  </head>
-  <body>
-    <button type="button" name="button" onclick='showInfo()' class='show-info'>Information</button>
-    <div id="info">
-      <table>
-        <tr>
-          <td>Week:</td><td id='week'></td>
-        </tr>
-        <tr>
-          <td>ASD:</td><td>Analiza statistică a datelor.</td>
-        </tr>
-        <tr>
-          <td>RC:</td><td>Reţele de calculatoare.</td>
-        </tr>
-        <tr>
-          <td>FER:</td><td>Fundamente economice ale ramurii.</td>
-        </tr>
-        <tr>
-          <td>TAP:</td><td>Tehnici avansate de programare.</td>
-        </tr>
-        <tr>
-          <td>GC:</td><td>Grafica pe calculator.</td>
-        </tr>
-        <tr>
-          <td>SI:</td><td>Securitatea informaţională.</td>
-        </tr>
-      </table>
-    </div>
-      <table class='schedule'>
-        <caption>Schedule IA-192 </caption>
-        <tr class='days'>
-          <td>Time \ Day</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td>
-        </tr>
-        <tr>
-          <td>08:00</td>
-          <td>c.ASD<br><span class='online'>Online</span></td>
-          <td>c.GC <br><span class='online'>Online</span></td>
-          <td></td>
-          <td>c.FER<br><span class='online'>Online</span></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>09:45</td>
-          <td>c.RC <br><span class='online'>Online</span></td>
-          <td></td>
-          <td></td>
-          <td>c.TAP<br><span class='online'>Online</span></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11:30</td>
-          <td id='p1'></td>
-          <td>c.SI<br><span class='online'>Online</span></td>
-          <td></td>
-          <td>c.FER<br><span class='online'>Online</span></td>
-          <td>lab.RC<br><span class="offline">cab.110/112</span></td>
-        </tr>
-        <tr>
-          <td>13:30</td>
-          <td></td>
-          <td></td>
-          <td>lab.TAP<br><span class="offline">cab.114</span></td>
-          <td></td>
-          <td>sem.FER<br><span class="offline">cab.609</span></td>
-        </tr>
-        <tr>
-          <td>15:15</td>
-          <td></td>
-          <td></td>
-          <td id='p2'></td>
-          <td></td>
-          <td id='p3'></td>
-        </tr>
-        <tr>
-          <td>17:00</td>
-          <td></td>
-          <td></td>
-          <td>lab.SI<br><span class="offline">cab.114</span></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-      <div id='study-now'>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
 
-      </div>
+  </head>
+  <body >
+
+    <table class='schedule'>
+      <caption>Schedule IA-192 </caption>
+      <tr class='days'>
+        <td>Time \ Day</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td>
+      </tr>
+      <tr>
+        <td>08:00</td>
+      </tr>
+      <tr>
+        <td>09:45</td>
+      </tr>
+      <tr>
+        <td>11:30</td>
+      </tr>
+      <tr>
+        <td>13:30</td>
+      </tr>
+      <tr>
+        <td>15:15</td>
+      </tr>
+      <tr>
+        <td>17:00</td>
+      </tr>
+      <tfoot class="bottom">
+        <tr colspan="6">
+          <td style='padding:0;margin:0;background:none;'>
+              <button type="button" class="button" name="button" id='show_passed'><span>SHOW PASSED</span></button>
+          </td>
+          <td style='padding:0;margin:0;background:none;'>
+            <button type="button" class="button" name="button" id='show_lesson'><span>LESSON NOW</span> </button>
+          </td>
+          <td id='lesson_now' colspan="6"> </td>
+        </tr>
+      </tfoot>
+    </table>
+
+
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src='js/script.js'></script>
+<script src="script.js"></script>
   </body>
 </html>
